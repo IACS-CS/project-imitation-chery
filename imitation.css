@@ -1,1 +1,124 @@
-/* CSS for your imitation here */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #2d2ba6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    position: relative; /* Required for the label positioning */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #2d2ba6;
+}
+
+.character-grid, .room-grid, .weapon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.character, .room, .weapon {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #2d2ba6;
+    color: white;
+}
+
+/* BACK TO CODE FOR ALL SIZES */
+
+/* Code to insert circular label to show how responsive code is working on lower right */
+main::before {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    color: #efefef;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-family: Helvetica, sans-serif;
+    font-size: 8pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BEGIN MOBILE RULES */
+@media only screen and (max-width: 768px) {
+    /* Mobile label */
+    main::before {
+        content: "Mobile";
+        background-color: #c8787888;
+    }
+}
+
+/* BEGIN MEDIUM WIDTH RULES */
+@media only screen and (min-width: 768px) and (max-width: 1399px) {
+    /* Laptop label */
+    main::before {
+        content: "Laptop";
+        background-color: #45454588;
+    }
+}
+
+/* BEGIN WIDE SCREEN RULES */
+@media only screen and (min-width: 1400px) {
+    /* Widescreen label */
+    main::before {
+        content: "Wide";
+        background-color: #00438888;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .character-grid, .room-grid, .weapon-grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
