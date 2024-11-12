@@ -1,113 +1,120 @@
+/* Global Styles */
 body {
-    background-color: #f1f0e8; /* Light cream background */
-    font-family: 'Times New Roman', serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  background-color: #f1f0e8; /* Light cream background */
+  font-family: 'Work Sans', sans-serif; /* Use Work Sans font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .cover {
-    background-color: #001f3f; /* Midnight blue background */
-    color: #ffffff; /* White text color */
-    text-align: center;
-    padding: 30px;
-    border: 8px solid #000000; /* Gold border */
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-    width: 350px;
+  background-color: #001f3f; /* Midnight blue background */
+  color: #ffffff; /* White text color */
+  text-align: center;
+  padding: 30px;
+  border: 8px solid #000000; /* Gold border */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  width: 350px; /* Fixed width */
 }
 
 .title {
-    font-size: 3.5em;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #FFD700; /* Gold for "Clue" */
+  font-size: 3.5em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff0000; /* Red for "Clue" */
 }
 
 .subtitle {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #ffffff; /* White for subtitle */
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #ffffff; /* White for subtitle */
 }
 
 .characters {
-    margin: 20px 0;
-    font-size: 1.2em;
+  margin: 20px 0;
+  font-size: 1.2em;
 }
 
-.characters p {
-    margin: 5px 0;
-    color: #ffffff; /* Gold for character names */
+.game-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .footer {
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-style: italic;
-    color: #ffffff; /* White for footer */
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #ffffff; /* White for footer */
 }
 
 .requirements {
-    margin-top: 20px;
-    font-size: 1em;
-    color: #ffffff; /* White for requirements */
-    border-top: 1px solid #000000; /* Gold border for requirements */
-    padding-top: 10px;
+  margin-top: 18px;
+  font-size: 1em;
+  color: #ffffff; /* White for requirements */
+  border-top: 1px solid #ffcc00; /* Gold border for requirements */
+  padding-top: 10px;
 }
 
+/* RESPONSIVE CODE */
 
-/* BACK TO CODE FOR ALL SIZES */
-
-/* Code to insert circular label to show how responsive code is working on lower right */
+/* Fixed label for mobile, tablet, and widescreen */
 main::before {
-    position: fixed;
-    bottom: 2px;
-    right: 2px;
-    color: #efefef;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-family: Helvetica, sans-serif;
-    font-size: 8pt;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+  color: #efefef;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-family: Helvetica, sans-serif;
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* BEGIN MOBILE RULES */
+/* Mobile - smaller screens */
 @media only screen and (max-width: 768px) {
-    /* Mobile label */
-    main::before {
-        content: "Mobile";
-        background-color: #c8787888;
-    }
+  main::before {
+    content: "Mobile";
+    background-color: #c8787888;
+  }
+  .cover {
+    width: 90%; /* Make cover width more fluid on mobile */
+    padding: 20px;
+  }
 }
 
-/* BEGIN MEDIUM WIDTH RULES */
+/* Laptop - medium screens */
 @media only screen and (min-width: 768px) and (max-width: 1399px) {
-    /* Laptop label */
-    main::before {
-        content: "Laptop";
-        background-color: #45454588;
-    }
+  main::before {
+    content: "Laptop";
+    background-color: #45454588;
+  }
+  .cover {
+    width: 60%; /* Increase width for medium screens */
+  }
 }
 
-/* BEGIN WIDE SCREEN RULES */
+/* Widescreen - larger screens */
 @media only screen and (min-width: 1400px) {
-    /* Widescreen label */
-    main::before {
-        content: "Wide";
-        background-color: #00438888;
-    }
+  main::before {
+    content: "Wide";
+    background-color: #00438888;
+  }
+  .cover {
+    width: 350px; /* Fixed width for large screens */
+  }
 }
 
-/* Responsive styles */
+/* Ensures elements stack correctly for mobile or small screens */
 @media (max-width: 600px) {
-    .character-grid, .room-grid, .weapon-grid {
-        grid-template-columns: 1fr; /* Stack on smaller screens */
-    }
+  .requirements {
+    font-size: 0.9em; /* Reduce font size */
+  }
 }
-
