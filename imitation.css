@@ -1,82 +1,87 @@
-/* Global Styles */
-body {
-  background-color: #f1f0e8; /* Light cream background */
-  font-family: 'Work Sans', sans-serif; /* Use Work Sans font */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+ <style>
+    /* Global Styles */
+    body {
+      background-color: #f1f0e8; /* Light cream background */
+      font-family: 'Work Sans', sans-serif; /* Use Work Sans font */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-.cover {
-  background-color: #001f3f; /* Midnight blue background */
-  color: #ffffff; /* White text color */
-  text-align: center;
-  padding: 30px;
-  border: 8px solid #000000; /* Gold border */
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  width: 350px; /* Fixed width */
-}
+    .cover {
+      background-color: #001f3f; /* Midnight blue background */
+      color: #ffffff; /* White text color */
+      text-align: center;
+      padding: 30px;
+      border: 8px solid #000000; /* Black border */
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      width: 350px; /* Fixed width */
+    }
 
-.title {
-  font-size: 3.5em;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ff0000; /* Red for "Clue" */
-}
+    
+    .title {
+      font-size: 3.5em;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #f10707; /* Red for "Clue" */
+    }
 
-.subtitle {
-  font-size: 1.5em;
-  margin: 10px 0;
-  color: #ffffff; /* White for subtitle */
-}
+    
+    .subtitle {
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: gold; /* Golden for subtitle */
+    }
 
-.characters {
-  margin: 20px 0;
-  font-size: 1.2em;
-}
+    .characters {
+      margin: 20px 0;
+      font-size: 1.2em;
+    }
 
-.game-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
+    .game-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-.footer {
-  margin-top: 20px;
-  font-size: 1.2em;
-  font-style: italic;
-  color: #ffffff; /* White for footer */
-}
+    
+    .footer {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-style: italic;
+      color: rgb(157, 43, 153); /* Purple for footer */
+    }
 
-.requirements {
-  margin-top: 18px;
-  font-size: 1em;
-  color: #ffffff; /* White for requirements */
-  border-top: 1px solid #ffcc00; /* Gold border for requirements */
-  padding-top: 10px;
-}
+    .requirements {
+      margin-top: 18px;
+      font-size: 1em;
+      color: #ffffff; /* White for requirements */
+      border-top: 1px solid #fffefc; /* White border for requirements */
+      padding-top: 10px;
+    }
 
-/* RESPONSIVE CODE */
-
-/* Fixed label for mobile, tablet, and widescreen */
-main::before {
-  position: fixed;
-  bottom: 2px;
-  right: 2px;
-  color: #efefef;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-family: Helvetica, sans-serif;
-  font-size: 8pt;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    /* RESPONSIVE CODE */
+    /* Fixed label for mobile, tablet, and widescreen */
+    main::before {
+      position: fixed;
+      bottom: 2px;
+      right: 2px;
+      color: #efefef;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-family: Helvetica, sans-serif;
+      font-size: 8pt;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
 
 /* Mobile - smaller screens */
 @media only screen and (max-width: 768px) {
