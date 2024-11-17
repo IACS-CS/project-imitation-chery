@@ -1,44 +1,190 @@
+/* Base Styles for Desktop */
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.cover {
+  text-align: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 4rem;
+  color: #333;
+  font-weight: 738;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #666;
+  margin-top: -10px;
+}
+
+.game-image {
+  width: 70%;
+  max-width: 500px;
+  margin: 20px 0;
+}
+
+.footer {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 20px;
+}
+
+.requirements {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 30px;
+}
+
+/* Tablet (Screens 600px to 1024px) */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .game-image {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .requirements {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (Screens 320px to 599px) */
+@media (max-width: 599px) {
+  body {
+    padding: 10px;
+  }
+
+  .cover {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .game-image {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+
+  .requirements {
+    font-size: 0.9rem;
+  }
+}
+
 /* Code for all screen sizes */
 
 /* BEGIN MOBILE RULES */
 @media only screen and (max-width: 768px) {
-  /* Code for mobile phones only: */
-
   /* Mobile label */
   main::before {
     content: "Mobile";
     background-color: #c8787888;
   }
-  /* End mobile label */
+  /* Code for mobile phones only: */
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .game-image {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+
+  .requirements {
+    font-size: 0.9rem;
+  }
 }
+/* End mobile label */
 
 /* BEGIN MEDIUM WIDTH RULES */
 @media only screen and (min-width: 768px) and (max-width: 1399px) {
-  /* Code for medium width and bigger : */
-
   /* Laptop label */
   main::before {
     content: "Laptop";
     background-color: #45454588;
   }
-  /* End laptop label */
+  /* Code for medium width and bigger (e.g. tablet/laptop) */
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .game-image {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .requirements {
+    font-size: 1rem;
+  }
 }
+/* End laptop label */
 
 /* BEGIN WIDE SCREEN RULES */
 @media only screen and (min-width: 1400px) {
-  /* Code for wide screen only */
-
   /* Widescreen label */
   main::before {
     content: "Wide";
     background-color: #00438888;
   }
-  /* End widescreen label */
+  /* Code for wide screen only */
+  .title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .game-image {
+    width: 70%;
+    max-width: 500px;
+  }
+
+  .requirements {
+    font-size: 1.2rem;
+  }
 }
+/* End widescreen label */
 
 /* BACK TO CODE FOR ALL SIZES */
 
-/* Code to insert circular label label to show how responsive code is working on lower right */
+/* Code to insert circular label to show how responsive code is working on lower right */
 main::before {
   position: fixed;
   bottom: 2px;
