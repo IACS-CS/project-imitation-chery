@@ -6,11 +6,13 @@ body {
   background-color: #f4f4f4;
 }
 
+main{
+  margin:auto;
+}
+
 .cover {
   text-align: center;
   padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .title {
@@ -43,25 +45,37 @@ body {
   margin-top: 30px;
 }
 
-/* Tablet (Screens 600px to 1024px) */
-@media (max-width: 1024px) {
+@media only screen and (max-width: 599px) {
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .game-image {
-    width: 80%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .footer {
+    font-size: 0.9rem;
   }
 
   .requirements {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .cover {
+    padding: 20px;
   }
 }
+
 
 /* Mobile (Screens 320px to 599px) */
 @media (max-width: 599px) {
@@ -198,4 +212,151 @@ main::before {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.cover {
+  margin: auto;
+}
+
+/* Global Styles */
+body {
+  background-color: #f1f0e8;
+  /* Light cream background */
+  font-family: 'Work Sans', sans-serif;
+  /* Use Work Sans font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.cover {
+  background-color: #001f3f;
+  /* Midnight blue background */
+  color: #ffffff;
+  /* White text color */
+  text-align: center;
+  padding: 30px;
+  border: 8px solid #000000;
+  /* Black border */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  width: 350px;
+  /* Fixed width */
+}
+
+
+.title {
+  font-size: 3.5em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f10707;
+  /* Red for "Clue" */
+}
+
+
+.subtitle {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: gold;
+  /* Golden for subtitle */
+}
+
+.characters {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.game-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.footer {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-style: italic;
+  color: rgb(157, 43, 153);
+  /* Purple for footer */
+}
+
+.requirements {
+  margin-top: 18px;
+  font-size: 1em;
+  color: #ffffff;
+  /* White for requirements */
+  border-top: 1px solid #fffefc;
+  /* White border for requirements */
+  padding-top: 10px;
+}
+
+/* RESPONSIVE CODE */
+/* Fixed label for mobile, tablet, and widescreen */
+main::before {
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+  color: #efefef;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-family: Helvetica, sans-serif;
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Mobile - smaller screens */
+@media only screen and (max-width: 768px) {
+  main::before {
+    content: "Mobile";
+    background-color: #c8787888;
+  }
+
+  .cover {
+    width: 90%;
+    /* Make cover width more fluid on mobile */
+    padding: 20px;
+  }
+}
+
+/* Laptop - medium screens */
+@media only screen and (min-width: 768px) and (max-width: 1399px) {
+  main::before {
+    content: "Laptop";
+    background-color: #45454588;
+  }
+
+  .cover {
+    width: 60%;
+    /* Increase width for medium screens */
+  }
+}
+
+/* Widescreen - larger screens */
+@media only screen and (min-width: 1400px) {
+  main::before {
+    content: "Wide";
+    background-color: #00438888;
+  }
+
+  .cover {
+    width: 350px;
+    /* Fixed width for large screens */
+  }
+}
+
+/* Ensures elements stack correctly for mobile or small screens */
+@media (max-width: 600px) {
+  .requirements {
+    font-size: 0.9em;
+    /* Reduce font size */
+  }
 }
