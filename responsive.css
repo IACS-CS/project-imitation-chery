@@ -1,135 +1,137 @@
-/* Base Styles for Desktop */
 body {
+  background-color: #f1f0e8;
   font-family: 'Work Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-}
-
-main{
-  margin:auto;
+  box-sizing: border-box;
 }
 
 .cover {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  background: rgb(35, 35, 90);
+  color: white;
   text-align: center;
-  padding: 40px;
+  padding: 20px;
+  border: 8px solid #000000;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  margin: auto;
 }
 
 .title {
-  font-size: 4rem;
-  color: #333;
-  font-weight: 738;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+  font-family: Futura, sans-serif;
+  margin: 0;
+  /* Remove margin for consistency */
 }
 
-.subtitle {
-  font-size: 2rem;
-  color: #666;
-  margin-top: -10px;
+.red {
+  color: red;
+}
+
+.top {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.main-title {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.classic {
+  color: gold;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.bottom div {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  right: 8px;
+  bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.circle-text {
+  font-size: 14px;
+  color: purple;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .game-image {
-  width: 70%;
-  max-width: 500px;
-  margin: 20px 0;
+  margin-top: 35px;
+  max-width: 100%;
+  height: auto;
 }
 
-.footer {
-  font-size: 1rem;
-  color: #888;
-  margin-top: 20px;
-}
+/* Responsive Design */
 
-.requirements {
-  font-size: 1.2rem;
-  color: #333;
-  margin-top: 30px;
-}
-
-@media only screen and (max-width: 599px) {
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-  }
-
-  .game-image {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .footer {
-    font-size: 0.9rem;
-  }
-
-  .requirements {
-    font-size: 0.9rem;
-  }
-
-  body {
-    padding: 10px;
-  }
-
-  .cover {
-    padding: 20px;
-  }
-}
-
-
-/* Mobile (Screens 320px to 599px) */
-@media (max-width: 599px) {
-  body {
-    padding: 10px;
-  }
-
-  .cover {
-    padding: 20px;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-  }
-
-  .game-image {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .footer {
-    font-size: 0.9rem;
-  }
-
-  .requirements {
-    font-size: 0.9rem;
-  }
-}
-
-/* Code for all screen sizes */
-
-/* BEGIN MOBILE RULES */
+/* Mobile - smaller screens (up to 768px wide) */
 @media only screen and (max-width: 768px) {
-  /* Mobile label */
-  main::before {
-    content: "Mobile";
-    background-color: #c8787888;
-  }
-  /* Code for mobile phones only: */
-  .title {
-    font-size: 2.5rem;
+  .cover {
+    width: 90%;
+    /* Make cover width more fluid on mobile */
+    padding: 15px;
+    /* Reduce padding for mobile */
   }
 
-  .subtitle {
-    font-size: 1.5rem;
+  .title {
+    font-size: 30px;
+    /* Adjust title size for mobile */
   }
 
   .game-image {
-    width: 90%;
+    width: 100%;
+    /* Ensure the image takes full width */
     max-width: 300px;
+    /* Restrict max width for images */
   }
 
   .footer {
@@ -138,24 +140,46 @@ main{
 
   .requirements {
     font-size: 0.9rem;
+    /* Slightly smaller font size for small devices */
+  }
+
+  .circle {
+    width: 80px;
+    /* Smaller circle size for mobile */
+    height: 80px;
+    bottom: 50px;
+    /* Adjust position of circle */
+  }
+
+  .circle-text {
+    font-size: 12px;
+    /* Smaller text inside circle for mobile */
+  }
+
+  .bottom {
+    justify-content: center;
+    /* Stack content on smaller screens */
+    padding: 10px 0;
+    /* Reduce padding */
+  }
+
+  .bottom div {
+    margin: 10px 0;
   }
 }
-/* End mobile label */
 
-/* BEGIN MEDIUM WIDTH RULES */
+/* Tablet to Laptop - medium screens (768px to 1399px wide) */
 @media only screen and (min-width: 768px) and (max-width: 1399px) {
-  /* Laptop label */
-  main::before {
-    content: "Laptop";
-    background-color: #45454588;
-  }
-  /* Code for medium width and bigger (e.g. tablet/laptop) */
-  .title {
-    font-size: 3rem;
+  .cover {
+    width: 80%;
+    /* Slightly increase width for medium screens */
+    max-width: 600px;
+    /* Ensure content doesn't stretch too wide */
   }
 
-  .subtitle {
-    font-size: 1.8rem;
+  .title {
+    font-size: 40px;
+    /* Adjust font size for medium screens */
   }
 
   .game-image {
@@ -165,20 +189,37 @@ main{
 
   .requirements {
     font-size: 1rem;
+    /* Default font size for medium screens */
+  }
+
+  .circle {
+    width: 90px;
+    /* Slightly larger circle */
+    height: 90px;
+    bottom: 60px;
+  }
+
+  .circle-text {
+    font-size: 14px;
+    /* Text inside the circle */
+  }
+
+  .bottom {
+    justify-content: space-between;
   }
 }
-/* End laptop label */
 
-/* BEGIN WIDE SCREEN RULES */
+/* Widescreen - larger screens (1400px and up) */
 @media only screen and (min-width: 1400px) {
-  /* Widescreen label */
-  main::before {
-    content: "Wide";
-    background-color: #00438888;
+  .cover {
+    width: auto;
+    /* Remove fixed width, allow container to grow */
+    max-width: 700px;
+    /* Max width for very large screens */
   }
-  /* Code for wide screen only */
+
   .title {
-    font-size: 4rem;
+    font-size: 50px;
   }
 
   .subtitle {
@@ -192,164 +233,19 @@ main{
 
   .requirements {
     font-size: 1.2rem;
-  }
-}
-/* End widescreen label */
-
-/* BACK TO CODE FOR ALL SIZES */
-
-/* Code to insert circular label to show how responsive code is working on lower right */
-main::before {
-  position: fixed;
-  bottom: 2px;
-  right: 2px;
-  color: #efefef;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-family: Helvetica, sans-serif;
-  font-size: 8pt;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.cover {
-  margin: auto;
-}
-
-/* Global Styles */
-body {
-  background-color: #f1f0e8;
-  /* Light cream background */
-  font-family: 'Work Sans', sans-serif;
-  /* Use Work Sans font */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.cover {
-  background-color: #001f3f;
-  /* Midnight blue background */
-  color: #ffffff;
-  /* White text color */
-  text-align: center;
-  padding: 30px;
-  border: 8px solid #000000;
-  /* Black border */
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  width: 350px;
-  /* Fixed width */
-}
-
-
-.title {
-  font-size: 3.5em;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #f10707;
-  /* Red for "Clue" */
-}
-
-
-.subtitle {
-  font-size: 1.5em;
-  margin: 10px 0;
-  color: gold;
-  /* Golden for subtitle */
-}
-
-.characters {
-  margin: 20px 0;
-  font-size: 1.2em;
-}
-
-.game-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-
-.footer {
-  margin-top: 20px;
-  font-size: 1.2em;
-  font-style: italic;
-  color: rgb(157, 43, 153);
-  /* Purple for footer */
-}
-
-.requirements {
-  margin-top: 18px;
-  font-size: 1em;
-  color: #ffffff;
-  /* White for requirements */
-  border-top: 1px solid #fffefc;
-  /* White border for requirements */
-  padding-top: 10px;
-}
-
-/* RESPONSIVE CODE */
-/* Fixed label for mobile, tablet, and widescreen */
-main::before {
-  position: fixed;
-  bottom: 2px;
-  right: 2px;
-  color: #efefef;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-family: Helvetica, sans-serif;
-  font-size: 8pt;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* Mobile - smaller screens */
-@media only screen and (max-width: 768px) {
-  main::before {
-    content: "Mobile";
-    background-color: #c8787888;
+    /* Slightly larger font for wide screens */
   }
 
-  .cover {
-    width: 90%;
-    /* Make cover width more fluid on mobile */
-    padding: 20px;
-  }
-}
-
-/* Laptop - medium screens */
-@media only screen and (min-width: 768px) and (max-width: 1399px) {
-  main::before {
-    content: "Laptop";
-    background-color: #45454588;
+  .circle {
+    width: 110px;
+    /* Larger circle for bigger screens */
+    height: 110px;
+    bottom: 70px;
   }
 
-  .cover {
-    width: 60%;
-    /* Increase width for medium screens */
-  }
-}
-
-/* Widescreen - larger screens */
-@media only screen and (min-width: 1400px) {
-  main::before {
-    content: "Wide";
-    background-color: #00438888;
-  }
-
-  .cover {
-    width: 350px;
-    /* Fixed width for large screens */
+  .circle-text {
+    font-size: 16px;
+    /* Larger text for the circle */
   }
 }
 
@@ -357,6 +253,6 @@ main::before {
 @media (max-width: 600px) {
   .requirements {
     font-size: 0.9em;
-    /* Reduce font size */
+    /* Reduce font size for smaller devices */
   }
 }
