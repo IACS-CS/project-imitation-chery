@@ -1,41 +1,18 @@
-body {
-  background-color: #f1f0e8;
-  font-family: 'Work Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .cover {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
+  width: 400px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   position: relative;
-  background: rgb(35, 35, 90);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border: 8px solid #000000;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  margin: auto;
 }
 
 .title {
   font-size: 50px;
   color: white;
   font-weight: bold;
-  font-family: Futura, sans-serif;
-  margin: 0;
-  /* Remove margin for consistency */
+  font-family: Futura;
 }
 
 .red {
@@ -62,7 +39,8 @@ body {
   font-weight: bold;
   font-family: 'Work Sans', sans-serif;
   text-align: center;
-  margin: 0;
+  margin-top: 50px;
+  /* Slightly moved down */
 }
 
 .classic {
@@ -75,12 +53,10 @@ body {
   align-items: center;
   padding: 16px;
   color: white;
-  flex-wrap: wrap;
 }
 
 .bottom div {
   margin: 5px 0;
-  width: 100%;
 }
 
 .circle {
@@ -105,147 +81,67 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 
-.game-image {
-  margin-top: 35px;
-  max-width: 100%;
-  height: auto;
+/* Temporary colors - ignore this */
+.cover {
+  background: rgb(35, 35, 90);
 }
 
-/* Responsive Design */
+.top,
+.bottom {
+  border: 2px solid red;
+}
 
-/* Mobile - smaller screens (up to 768px wide) */
+.bottom {
+  color: white;
+}
+
+.bottom div {
+  border: 3px solid red;
+}
+
+/* Adjusting the image position */
+.game-image {
+  margin-top: 60px;
+  /* Adjusted value to move the image further down */
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile - smaller screens */
 @media only screen and (max-width: 768px) {
+  main::before {
+    content: "Mobile";
+    background-color: #c8787888;
+  }
+
   .cover {
     width: 90%;
-    /* Make cover width more fluid on mobile */
-    padding: 15px;
-    /* Reduce padding for mobile */
-  }
-
-  .title {
-    font-size: 30px;
-    /* Adjust title size for mobile */
-  }
-
-  .game-image {
-    width: 100%;
-    /* Ensure the image takes full width */
-    max-width: 300px;
-    /* Restrict max width for images */
-  }
-
-  .footer {
-    font-size: 0.9rem;
-  }
-
-  .requirements {
-    font-size: 0.9rem;
-    /* Slightly smaller font size for small devices */
-  }
-
-  .circle {
-    width: 80px;
-    /* Smaller circle size for mobile */
-    height: 80px;
-    bottom: 50px;
-    /* Adjust position of circle */
-  }
-
-  .circle-text {
-    font-size: 12px;
-    /* Smaller text inside circle for mobile */
-  }
-
-  .bottom {
-    justify-content: center;
-    /* Stack content on smaller screens */
-    padding: 10px 0;
-    /* Reduce padding */
-  }
-
-  .bottom div {
-    margin: 10px 0;
+    padding: 20px;
   }
 }
 
-/* Tablet to Laptop - medium screens (768px to 1399px wide) */
+/* Laptop - medium screens */
 @media only screen and (min-width: 768px) and (max-width: 1399px) {
+  main::before {
+    content: "Laptop";
+    background-color: #45454588;
+  }
+
   .cover {
-    width: 80%;
-    /* Slightly increase width for medium screens */
-    max-width: 600px;
-    /* Ensure content doesn't stretch too wide */
-  }
-
-  .title {
-    font-size: 40px;
-    /* Adjust font size for medium screens */
-  }
-
-  .game-image {
-    width: 80%;
-    max-width: 400px;
-  }
-
-  .requirements {
-    font-size: 1rem;
-    /* Default font size for medium screens */
-  }
-
-  .circle {
-    width: 90px;
-    /* Slightly larger circle */
-    height: 90px;
-    bottom: 60px;
-  }
-
-  .circle-text {
-    font-size: 14px;
-    /* Text inside the circle */
-  }
-
-  .bottom {
-    justify-content: space-between;
+    width: 60%;
   }
 }
 
-/* Widescreen - larger screens (1400px and up) */
+/* Widescreen - larger screens */
 @media only screen and (min-width: 1400px) {
+  main::before {
+    content: "Wide";
+    background-color: #00438888;
+  }
+
   .cover {
-    width: auto;
-    /* Remove fixed width, allow container to grow */
-    max-width: 700px;
-    /* Max width for very large screens */
-  }
-
-  .title {
-    font-size: 50px;
-  }
-
-  .subtitle {
-    font-size: 2rem;
-  }
-
-  .game-image {
-    width: 70%;
-    max-width: 500px;
-  }
-
-  .requirements {
-    font-size: 1.2rem;
-    /* Slightly larger font for wide screens */
-  }
-
-  .circle {
-    width: 110px;
-    /* Larger circle for bigger screens */
-    height: 110px;
-    bottom: 70px;
-  }
-
-  .circle-text {
-    font-size: 16px;
-    /* Larger text for the circle */
+    width: 350px;
   }
 }
 
@@ -253,6 +149,5 @@ body {
 @media (max-width: 600px) {
   .requirements {
     font-size: 0.9em;
-    /* Reduce font size for smaller devices */
   }
 }

@@ -1,4 +1,3 @@
-/* Default styles */
 .cover {
   width: 400px;
   height: 400px;
@@ -7,6 +6,9 @@
   justify-content: space-between;
   align-items: stretch;
   position: relative;
+  background-image: url("Clue.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .title {
@@ -40,7 +42,7 @@
   font-weight: bold;
   font-family: 'Work Sans', sans-serif;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 50px;
   /* Slightly moved down */
 }
 
@@ -64,7 +66,7 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   right: 8px;
   bottom: 70px;
@@ -73,6 +75,7 @@
   align-items: center;
   padding: 10px;
   text-align: center;
+  
 }
 
 .circle-text {
@@ -83,22 +86,12 @@
 }
 
 /* Temporary colors - ignore this */
-.cover {
-  background: rgb(35, 35, 90);
-}
 
-.top,
-.bottom {
-  border: 2px solid red;
-}
 
 .bottom {
   color: white;
 }
 
-.bottom div {
-  border: 3px solid red;
-}
 
 /* Adjusting the image position */
 .game-image {
@@ -107,48 +100,4 @@
   max-width: 80%;
   height: auto;
   object-fit: contain;
-}
-
-/* Mobile - smaller screens */
-@media only screen and (max-width: 768px) {
-  main::before {
-    content: "Mobile";
-    background-color: #c8787888;
-  }
-
-  .cover {
-    width: 90%;
-    padding: 20px;
-  }
-}
-
-/* Laptop - medium screens */
-@media only screen and (min-width: 768px) and (max-width: 1399px) {
-  main::before {
-    content: "Laptop";
-    background-color: #45454588;
-  }
-
-  .cover {
-    width: 60%;
-  }
-}
-
-/* Widescreen - larger screens */
-@media only screen and (min-width: 1400px) {
-  main::before {
-    content: "Wide";
-    background-color: #00438888;
-  }
-
-  .cover {
-    width: 350px;
-  }
-}
-
-/* Ensures elements stack correctly for mobile or small screens */
-@media (max-width: 600px) {
-  .requirements {
-    font-size: 0.9em;
-  }
 }
