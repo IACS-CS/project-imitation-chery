@@ -1,6 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #000;
+}
+
 .cover {
   width: 400px;
-  height: 400px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,6 +20,9 @@
   background-image: url("Clue.png");
   background-size: cover;
   background-position: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .title {
@@ -36,12 +50,30 @@
   height: 80px;
 }
 
+.main-title-box {
+  background-color: black;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  width: fit-content;
+}
+
+.main-title {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.classic {
+  color: gold;
+}
+
+/* Bottom section with ages and players */
 .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  color: white;
   position: relative;
 }
 
@@ -53,45 +85,25 @@
 }
 
 .bottom-left div {
-  margin-bottom: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .divider {
   width: 100%;
   height: 2px;
   background-color: white;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
-.main-title-box {
-  background-color: black;
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid white;
-  margin-left: 10px;
-}
-
-.main-title {
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
-  font-family: 'Work Sans', sans-serif;
-  text-align: center;
-}
-
-.classic {
-  color: gold;
-}
-
-/* Blue Cyan Gradient for Hasbro Gaming */
 .hasbro-box {
   background: linear-gradient(135deg, #00B8D9, #0076A3);
   /* Cyan blue gradient */
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 50px;
   /* Oval shape */
   border: 2px solid white;
-  /* White outline */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,32 +115,78 @@
   font-weight: bold;
 }
 
+/* Circle with "Meet the NEW suspect" */
 .circle {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  right: 8px;
+  right: 20px;
   bottom: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   text-align: center;
+  animation: bounce 1.5s ease-in-out infinite;
 }
 
 .circle-text {
-  font-size: 14px;
+  font-size: 12px;
   color: purple;
   font-weight: bold;
-  font-family: 'Work Sans', sans-serif;
+  text-align: center;
 }
 
-/* Adjusting the image position */
-.game-image {
-  margin-top: 60px;
-  max-width: 80%;
-  height: auto;
-  object-fit: contain;
+/* Bounce Animation for the Circle */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .cover {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .main-title-box {
+    padding: 8px 15px;
+  }
+
+  .main-title {
+    font-size: 16px;
+  }
+
+  .bottom-left div {
+    font-size: 12px;
+  }
+
+  .hasbro-box {
+    padding: 8px 20px;
+  }
+
+  .hasbro-box div {
+    font-size: 12px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    bottom: 50px;
+  }
 }
