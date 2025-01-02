@@ -6,6 +6,9 @@
   justify-content: space-between;
   align-items: stretch;
   position: relative;
+  background-image: url("Clue.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .title {
@@ -33,37 +36,78 @@
   height: 80px;
 }
 
-.main-title {
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
-  font-family: 'Work Sans', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  /* Slightly moved down */
-}
-
-.classic {
-  color: gold;
-}
-
 .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
   color: white;
+  position: relative;
 }
 
-.bottom div {
+.bottom-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bottom-left div {
+  margin-bottom: 5px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: white;
   margin: 5px 0;
+}
+
+.main-title-box {
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid white;
+  margin-left: 10px;
+}
+
+.main-title {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+}
+
+.classic {
+  color: gold;
+}
+
+/* Blue Cyan Gradient for Hasbro Gaming */
+.hasbro-box {
+  background: linear-gradient(135deg, #00B8D9, #0076A3);
+  /* Cyan blue gradient */
+  padding: 10px 20px;
+  border-radius: 50px;
+  /* Oval shape */
+  border: 2px solid white;
+  /* White outline */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hasbro-box div {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .circle {
   position: absolute;
   width: 100px;
   height: 100px;
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   right: 8px;
   bottom: 70px;
@@ -81,28 +125,9 @@
   font-family: 'Work Sans', sans-serif;
 }
 
-/* Temporary colors - ignore this */
-.cover {
-  background: rgb(35, 35, 90);
-}
-
-.top,
-.bottom {
-  border: 2px solid red;
-}
-
-.bottom {
-  color: white;
-}
-
-.bottom div {
-  border: 3px solid red;
-}
-
 /* Adjusting the image position */
 .game-image {
   margin-top: 60px;
-  /* Adjusted value to move the image further down */
   max-width: 80%;
   height: auto;
   object-fit: contain;
