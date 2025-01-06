@@ -79,9 +79,11 @@ body {
 
 .bottom-left {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  gap: 8px;
+  /* Adjust gap between elements */
+  align-items: center;
 }
 
 .bottom-left div {
@@ -91,12 +93,16 @@ body {
 }
 
 .divider {
-  width: 100%;
-  height: 2px;
+  width: 2px;
+  /* Make the divider thin */
+  height: 20px;
+  /* Set fixed height to match the text height */
   background-color: white;
-  margin: 10px 0;
+  margin: 0 10px;
+  /* Space out the divider */
 }
 
+/* Hasbro box styling */
 .hasbro-box {
   background: linear-gradient(135deg, #00B8D9, #0076A3);
   /* Cyan blue gradient */
@@ -152,41 +158,3 @@ body {
   }
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .cover {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-  }
-
-  .title {
-    font-size: 40px;
-  }
-
-  .main-title-box {
-    padding: 8px 15px;
-  }
-
-  .main-title {
-    font-size: 16px;
-  }
-
-  .bottom-left div {
-    font-size: 12px;
-  }
-
-  .hasbro-box {
-    padding: 8px 20px;
-  }
-
-  .hasbro-box div {
-    font-size: 12px;
-  }
-
-  .circle {
-    width: 100px;
-    height: 100px;
-    bottom: 50px;
-  }
-}

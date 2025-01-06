@@ -79,9 +79,11 @@ body {
 
 .bottom-left {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  gap: 8px;
+  /* Adjust gap between elements */
+  align-items: center;
 }
 
 .bottom-left div {
@@ -91,12 +93,16 @@ body {
 }
 
 .divider {
-  width: 100%;
-  height: 2px;
+  width: 2px;
+  /* Make the divider thin */
+  height: 20px;
+  /* Set fixed height to match the text height */
   background-color: white;
-  margin: 10px 0;
+  margin: 0 10px;
+  /* Space out the divider */
 }
 
+/* Hasbro box styling */
 .hasbro-box {
   background: linear-gradient(135deg, #00B8D9, #0076A3);
   /* Cyan blue gradient */
@@ -188,49 +194,5 @@ body {
     width: 100px;
     height: 100px;
     bottom: 50px;
-  }
-}
-
-/* Mobile - smaller screens */
-@media only screen and (max-width: 768px) {
-  main::before {
-    content: "Mobile";
-    background-color: #c8787888;
-  }
-
-  .cover {
-    width: 90%;
-    padding: 20px;
-  }
-}
-
-/* Laptop - medium screens */
-@media only screen and (min-width: 768px) and (max-width: 1399px) {
-  main::before {
-    content: "Laptop";
-    background-color: #45454588;
-  }
-
-  .cover {
-    width: 60%;
-  }
-}
-
-/* Widescreen - larger screens */
-@media only screen and (min-width: 1400px) {
-  main::before {
-    content: "Wide";
-    background-color: #00438888;
-  }
-
-  .cover {
-    width: 350px;
-  }
-}
-
-/* Ensures elements stack correctly for mobile or small screens */
-@media (max-width: 600px) {
-  .requirements {
-    font-size: 0.9em;
   }
 }
